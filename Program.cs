@@ -11,9 +11,9 @@ namespace WarehouseOrderSimulator
             Console.WriteLine(@"
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║     WAREHOUSE ORDER SIMULATOR - WMS Stock Allocator         ║
+║     WAREHOUSE ORDER SIMULATOR - WMS Stock Allocator          ║
 ║                                                              ║
-║     Simulating real warehouse order processing              ║
+║     Simulating real warehouse order processing               ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝");
             Console.ResetColor();
@@ -37,12 +37,12 @@ namespace WarehouseOrderSimulator
             while (running)
             {
                 Console.WriteLine("\n┌─────────────────────────────────────────────────┐");
-                Console.WriteLine("│                    MAIN MENU                      │");
+                Console.WriteLine("│                    MAIN MENU                    │");
                 Console.WriteLine("├─────────────────────────────────────────────────┤");
                 Console.WriteLine("│  1. View Current Inventory                      │");
                 Console.WriteLine("│  2. Process New Order                           │");
                 Console.WriteLine("│  3. Process Demo Order (pre-configured)         │");
-                Console.WriteLine("│  4. Exit                                         │");
+                Console.WriteLine("│  4. Exit                                        │");
                 Console.WriteLine("└─────────────────────────────────────────────────┘");
                 Console.Write("\nSelect option (1-4): ");
 
@@ -94,9 +94,9 @@ namespace WarehouseOrderSimulator
 
             while (addingItems)
             {
-                Console.WriteLine("\n┌─────────────────────────────────────────────────┐");
+                Console.WriteLine("\n┌───────────────────────────────────────────────────────┐");
                 Console.WriteLine("│ Available SKUs: SKU001, SKU002, SKU003, SKU004, SKU005 │");
-                Console.WriteLine("└─────────────────────────────────────────────────┘");
+                Console.WriteLine("└────────────────────────────────────────────────────────┘");
                 Console.Write("Enter Product SKU (or 'done' to finish): ");
                 string sku = Console.ReadLine()?.ToUpper();
 
