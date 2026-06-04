@@ -21,15 +21,15 @@ namespace WarehouseOrderSimulator
             var db = new DatabaseHelper();
 
             // Test database connection
-            Console.WriteLine("\n🔌 Testing database connection...");
+            Console.WriteLine("\n Testing database connection...");
             if (!db.TestConnection())
             {
-                Console.WriteLine("❌ Cannot connect to database. Please check SQL Server is running.");
+                Console.WriteLine(" Cannot connect to database. Please check SQL Server is running.");
                 Console.WriteLine("Press any key to exit...");
                 Console.ReadKey();
                 return;
             }
-            Console.WriteLine("✅ Database connected successfully!\n");
+            Console.WriteLine(" Database connected successfully!\n");
 
             var processor = new OrderProcessor();
 
@@ -64,11 +64,11 @@ namespace WarehouseOrderSimulator
 
                     case "4":
                         running = false;
-                        Console.WriteLine("\n👋 Thank you for using Warehouse Order Simulator!");
+                        Console.WriteLine("\n Thank you for using Warehouse Order Simulator!");
                         break;
 
                     default:
-                        Console.WriteLine("❌ Invalid option. Please try again.");
+                        Console.WriteLine(" Invalid option. Please try again.");
                         break;
                 }
             }
@@ -76,16 +76,16 @@ namespace WarehouseOrderSimulator
 
         static void ProcessManualOrder(OrderProcessor processor)
         {
-            Console.WriteLine("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+            Console.WriteLine("\n──────────────────────────────────────────────────────────");
             Console.WriteLine("                   CREATE NEW ORDER");
-            Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+            Console.WriteLine("──────────────────────────────────────────────────────────");
 
             Console.Write("Enter Order Number (e.g., ORD-001): ");
             string orderNumber = Console.ReadLine();
 
             if (string.IsNullOrWhiteSpace(orderNumber))
             {
-                Console.WriteLine("❌ Order number cannot be empty!");
+                Console.WriteLine(" Order number cannot be empty!");
                 return;
             }
 
@@ -94,7 +94,7 @@ namespace WarehouseOrderSimulator
 
             while (addingItems)
             {
-                Console.WriteLine("\n┌───────────────────────────────────────────────────────┐");
+                Console.WriteLine("\n┌────────────────────────────────────────────────────────┐");
                 Console.WriteLine("│ Available SKUs: SKU001, SKU002, SKU003, SKU004, SKU005 │");
                 Console.WriteLine("└────────────────────────────────────────────────────────┘");
                 Console.Write("Enter Product SKU (or 'done' to finish): ");
@@ -105,24 +105,24 @@ namespace WarehouseOrderSimulator
 
                 if (string.IsNullOrWhiteSpace(sku))
                 {
-                    Console.WriteLine("❌ SKU cannot be empty!");
+                    Console.WriteLine(" SKU cannot be empty!");
                     continue;
                 }
 
                 Console.Write($"Enter quantity for {sku}: ");
                 if (!int.TryParse(Console.ReadLine(), out int quantity) || quantity <= 0)
                 {
-                    Console.WriteLine("❌ Please enter a valid positive number!");
+                    Console.WriteLine(" Please enter a valid positive number!");
                     continue;
                 }
 
                 items.Add(new OrderItem { SKU = sku, Quantity = quantity });
-                Console.WriteLine($"✅ Added {quantity} of {sku}");
+                Console.WriteLine($" Added {quantity} of {sku}");
             }
 
             if (items.Count == 0)
             {
-                Console.WriteLine("❌ No items added to order!");
+                Console.WriteLine(" No items added to order!");
                 return;
             }
 
