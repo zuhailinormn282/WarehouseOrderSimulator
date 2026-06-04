@@ -20,3 +20,4 @@ A warehouse management system simulator that processes orders, checks stock avai
 3. Build and run the console application
 
 ## Demo
+<img width="1113" height="626" alt="image" src="https://github.com/user-attachments/assets/27abe090-8257-4cb3-9a26-2f6ff557c977" />
