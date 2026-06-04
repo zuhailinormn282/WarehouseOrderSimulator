@@ -25,4 +25,4 @@ A warehouse management system simulator that processes orders, checks stock avai
 
 
 ### Order Processing Flow
-<img width="641" height="725" alt="image" src="https://github.com/user-attachments/assets/9684f714-5a13-4080-81ed-e7eaf71eeb40" />
+<img width="681" height="731" alt="image" src="https://github.com/user-attachments/assets/a284b381-476c-456d-80ce-abcc209ffce1" />
