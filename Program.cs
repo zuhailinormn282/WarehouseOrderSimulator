@@ -131,9 +131,9 @@ namespace WarehouseOrderSimulator
 
         static void ProcessDemoOrder(OrderProcessor processor)
         {
-            Console.WriteLine("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+            Console.WriteLine("\n──────────────────────────────────────────────────────────");
             Console.WriteLine("                  PROCESSING DEMO ORDER");
-            Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+            Console.WriteLine("──────────────────────────────────────────────────────────");
 
             var demoItems = new List<OrderItem>
             {
